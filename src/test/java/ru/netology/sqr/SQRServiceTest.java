@@ -9,8 +9,11 @@ class SQRServiceTest {
     @Test
     void shouldSqrtCount() {
         SQRService sqrService = new SQRService();
-        int range1 = 100;
+        int range1 = 200;
         int range2 = 300;
-        System.out.println(sqrService);
+       // int counter = 0;
+        int expected = 3;
+        int actual = sqrService.countSqrt(range1,range2);
+        assertEquals(expected, actual);
     }
 }
