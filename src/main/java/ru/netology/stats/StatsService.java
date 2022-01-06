@@ -82,17 +82,22 @@ public class StatsService {
     public int lowAvgAmount(int[] sales) {
         int months = 0;
             for (int sale : sales) {
-                if (sale < 15) {
+                int i = sumAmount(sales) / sales.length;
+                if (sale <  i) {
                     months = months +1;
                 }
             }
         return months;
     }
+
+
+
     // кейс 6 : Кол. месяцев, где продажи выше среднего
     public int overAvgAmount(int[] sales) {
         int months = 0;
         for (int sale : sales) {
-            if (sale > 15) {
+            int i = sumAmount(sales) / sales.length;
+            if (sale > i) {
                 months = months +1;
             }
         }
